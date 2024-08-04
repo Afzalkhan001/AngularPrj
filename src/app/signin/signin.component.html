@@ -1,0 +1,9 @@
+<form [formGroup]="signin">
+    <input type="email" placeholder="email or phonenumber" name="email" formControlName="email">
+    <small *ngIf="signin.get('email')?.hasError('required') && signin.get('email')?.touched">enter a correct email</small>
+    <small *ngIf="signin.get('email')?.hasError('maxlengh') && signin.get('email')?.touched">enter a correct email</small>
+    <small *ngIf="signin.get('email')?.hasError('minlength') && signin.get('email')?.touched">enter a correct email</small>
+    <input type="username" placeholder="enter:username" name="username" formControlName="username">
+    <input type="password" placeholder="enter:password" name="password" formControlName="password">
+    <button type="submit">submit</button>
+</form>

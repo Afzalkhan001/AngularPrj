@@ -1,0 +1,7 @@
+<input type="text" #myInput>
+<button (click)="onclick(myInput.value)">
+    Click me!
+</button>
+{{myInput.value}}
+<input type="text" [(ngModel)]="Name">
+{{Name}}
